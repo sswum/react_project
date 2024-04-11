@@ -1,8 +1,6 @@
 import React from 'react';
 
-const Main = () => { 
-  throw new Error('에러발생');
-  
+const Main = () => {
   return <h1>메인페이지</h1>;
 };
 
