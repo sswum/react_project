@@ -129,8 +129,18 @@ import './i18n';
 ...
 ```
 
+
 - 적용하기 : useTranslation 훅 / react-i18next
     - t : 메세지 조회 함수
     - i18n : 편의 기능 객체, changeLanguage(..) : 언어 변경
 
 ```jsx
+
+# 없는 페이지
+- * : 없는 페이지 - commons/pages/NotFound.js 
+
+
+# 메인페이지
+
+##에러페이지
+class형 컴포넌트 - componentDidCatch
