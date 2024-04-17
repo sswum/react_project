@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import JoinForm from '../components/JoinForm';
+import JoinContainer from '../containers/JoinContainer';
 import { OuterBox } from '../../commons/components/LayoutBox';
 import { MainTitle } from '../../commons/components/TitleBox';
 
@@ -16,7 +16,7 @@ const Join = () => {
 
       <OuterBox>
         <MainTitle>{t('회원가입')}</MainTitle>
-        <JoinForm />
+        <JoinContainer />
       </OuterBox>
     </>
   );
