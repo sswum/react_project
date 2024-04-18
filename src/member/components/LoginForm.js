@@ -37,7 +37,7 @@ const LinkBox = styled.div`
   }
 `;
 
-const LoginForm = ({ form, onSubmit, onChange,errors }) => {
+const LoginForm = ({ form, onSubmit, onChange, errors }) => {
   const { t } = useTranslation();
 
   return (
@@ -56,7 +56,7 @@ const LoginForm = ({ form, onSubmit, onChange,errors }) => {
           name="password"
           value={form.password ?? ''}
           placeholder={t('비밀번호')}
-          onChage={onChange}
+          onChange={onChange}
         />
         <MessageBox messages={errors.password} color="danger" />
         <MidButton type="submit" color="primary">
