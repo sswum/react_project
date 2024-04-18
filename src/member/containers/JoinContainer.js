@@ -17,7 +17,7 @@ const JoinContainer = () => {
   /**
    * 회원 가입 처리
    *
-   * 1. 데이터 검증
+   * 1. 데이터 검증 (검증이 7-80%)
    *
    *      1) 필수 항목 체크 - 이메일, 비밀번호, 비밀번호 확인, 회원명, 약관동의
    *      2) 이메일 중복 여부,  이메일 형식 체크
@@ -27,7 +27,7 @@ const JoinContainer = () => {
    * 2. 가입 처리 - 영구 저장
    * 3. 로그인 페이지 이동
    *
-   *
+   *  [이건 웹이나 앱이나 똑같은 과정이 필요]
    */
 
   const onSubmit = useCallback(
@@ -48,7 +48,10 @@ const JoinContainer = () => {
 
       for (const [field, msg] of Object.entries(requiredFields)) {
         // !from[field] - null, undefined, '' 체크, !form[field].trim() - ' '
-        if (!form[field] || (form[field] && !form[field].trim())) {
+        if (
+          !form[field] ||
+          (typeof form[field] === 'string' && !form[field].trim())
+        ) {
           _errors[field] = _errors[field] || [];
           _errors[field].push(msg);
           hasErrors = true;
